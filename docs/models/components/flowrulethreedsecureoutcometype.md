@@ -1,0 +1,10 @@
+# FlowRuleThreeDSecureOutcomeType
+
+The type of action outcome for the given rule.
+
+
+## Values
+
+| Name           | Value          |
+| -------------- | -------------- |
+| `ThreeDSecure` | three-d-secure |

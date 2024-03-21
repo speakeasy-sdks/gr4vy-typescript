@@ -1,0 +1,10 @@
+# FlowRuleMethodOutcomeType
+
+The type of action outcome for the given rule.
+
+
+## Values
+
+| Name   | Value  |
+| ------ | ------ |
+| `List` | list   |

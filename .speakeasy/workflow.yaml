@@ -1,0 +1,9 @@
+workflowVersion: 1.0.0
+sources:
+    openapi:
+        inputs:
+            - location: https://gr4vy.github.io/gr4vy-openapi/openapi.v1.json
+targets:
+    first-target:
+        target: typescript
+        source: openapi
