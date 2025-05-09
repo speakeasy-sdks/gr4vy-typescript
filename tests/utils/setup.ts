@@ -4,7 +4,7 @@ import path from "path";
 import { Gr4vy, withToken } from "../../src";
 
 const loadPrivateKey = (): string => {
-  let privateKey = process.env.GR4VY_PRIVATE_KEY;
+  let privateKey = process.env.PRIVATE_KEY;
 
   if (!privateKey) {
     const filename = path.resolve(__dirname, "./../../private_key.pem");
