@@ -48,7 +48,7 @@ async function run() {
         }),
     });
 
-    const result = await gr4vy.transactions.listTransactions({});
+    const result = await gr4vy.transactions.list({});
 
     // Handle the result
     console.log(result);
