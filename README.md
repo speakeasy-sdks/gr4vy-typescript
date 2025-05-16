@@ -1,9 +1,7 @@
 # Gr4vy Typescript SDK (Beta)
 
 <div align="left">
-    <a href="https://www.npmjs.com/package/@gr4vy/sdk">
-      <img alt="NPM Version" src="https://img.shields.io/npm/v/%40gr4vy%2Fsdk?style=for-the-badge">
-    </a>
+    <a href="https://www.npmjs.com/package/@gr4vy/sdk"><img alt="NPM Version" src="https://img.shields.io/npm/v/%40gr4vy%2Fsdk?style=for-the-badge" /></a>
     <a href="https://speakeasyapi.dev/"><img src="https://custom-icon-badges.demolab.com/badge/-Built%20By%20Speakeasy-212015?style=for-the-badge&logoColor=FBE331&logo=speakeasy&labelColor=545454" /></a>
 </div>
 
