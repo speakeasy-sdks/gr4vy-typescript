@@ -24,6 +24,35 @@ This SDK is designed to simplify development, reduce boilerplate code, and help 
 
 <!-- No Summary [summary] -->
 
+<!-- Start Table of Contents [toc] -->
+## Table of Contents
+<!-- $toc-max-depth=2 -->
+* [Gr4vy Typescript SDK (Beta)](#gr4vy-typescript-sdk-beta)
+  * [SDK Installation](#sdk-installation)
+  * [Requirements](#requirements)
+  * [SDK Example Usage](#sdk-example-usage)
+  * [Bearer token generation](#bearer-token-generation)
+  * [Embed token generation](#embed-token-generation)
+  * [Merchant account ID selection](#merchant-account-id-selection)
+  * [Webhooks verification](#webhooks-verification)
+  * [Available Resources and Operations](#available-resources-and-operations)
+  * [Error Handling](#error-handling)
+  * [Server Selection](#server-selection)
+  * [Custom HTTP Client](#custom-http-client)
+  * [Authentication](#authentication)
+  * [SDK Installation](#sdk-installation-1)
+  * [SDK Example Usage](#sdk-example-usage-1)
+  * [Pagination](#pagination)
+  * [Retries](#retries)
+  * [Standalone functions](#standalone-functions)
+  * [Debugging](#debugging)
+* [Development](#development)
+  * [Testing](#testing)
+  * [Maturity](#maturity)
+  * [Contributions](#contributions)
+
+<!-- End Table of Contents [toc] -->
+
 ## SDK Installation
 
 ### NPM
@@ -1116,7 +1145,7 @@ You can also enable a default debug logger by setting an environment variable `G
 
 ## Testing
 
-To run the tests, install NPM and run the following.
+To run the tests, install NPM, ensure to download the `private_key.pem` for the test environment, and run the following.
 
 ```sh
 npm install
