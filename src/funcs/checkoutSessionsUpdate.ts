@@ -33,7 +33,7 @@ import { Result } from "../types/fp.js";
  */
 export function checkoutSessionsUpdate(
   client: Gr4vyCore,
-  checkoutSessionUpdate: components.CheckoutSessionUpdate,
+  checkoutSessionCreate: components.CheckoutSessionCreate,
   sessionId: string,
   timeoutInSeconds?: number | undefined,
   merchantAccountId?: string | null | undefined,
@@ -64,7 +64,7 @@ export function checkoutSessionsUpdate(
 > {
   return new APIPromise($do(
     client,
-    checkoutSessionUpdate,
+    checkoutSessionCreate,
     sessionId,
     timeoutInSeconds,
     merchantAccountId,
@@ -74,7 +74,7 @@ export function checkoutSessionsUpdate(
 
 async function $do(
   client: Gr4vyCore,
-  checkoutSessionUpdate: components.CheckoutSessionUpdate,
+  checkoutSessionCreate: components.CheckoutSessionCreate,
   sessionId: string,
   timeoutInSeconds?: number | undefined,
   merchantAccountId?: string | null | undefined,
@@ -107,7 +107,7 @@ async function $do(
   ]
 > {
   const input: operations.UpdateCheckoutSessionRequest = {
-    checkoutSessionUpdate: checkoutSessionUpdate,
+    checkoutSessionCreate: checkoutSessionCreate,
     sessionId: sessionId,
     timeoutInSeconds: timeoutInSeconds,
     merchantAccountId: merchantAccountId,
@@ -123,7 +123,7 @@ async function $do(
     return [parsed, { status: "invalid" }];
   }
   const payload = parsed.value;
-  const body = encodeJSON("body", payload.CheckoutSessionUpdate, {
+  const body = encodeJSON("body", payload.CheckoutSessionCreate, {
     explode: true,
   });
 

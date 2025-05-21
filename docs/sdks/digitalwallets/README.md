@@ -32,7 +32,7 @@ async function run() {
   const result = await gr4vy.digitalWallets.create({
     provider: "click-to-pay",
     merchantName: "<value>",
-    merchantCountryCode: "US",
+    merchantCountryCode: "DE",
     acceptTermsAndConditions: false,
   });
 
@@ -66,7 +66,7 @@ async function run() {
   const res = await digitalWalletsCreate(gr4vy, {
     provider: "click-to-pay",
     merchantName: "<value>",
-    merchantCountryCode: "US",
+    merchantCountryCode: "DE",
     acceptTermsAndConditions: false,
   });
 

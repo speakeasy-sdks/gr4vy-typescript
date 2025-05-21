@@ -1,12 +1,12 @@
-# CheckoutSessionUpdate
+# CheckoutSessionCreate
 
 ## Example Usage
 
 ```typescript
-import { CheckoutSessionUpdate } from "@gr4vy/sdk/models/components";
+import { CheckoutSessionCreate } from "@gr4vy/sdk/models/components";
 import { RFCDate } from "@gr4vy/sdk/types";
 
-let value: CheckoutSessionUpdate = {
+let value: CheckoutSessionCreate = {
   cartItems: [
     {
       name: "GoPro HD",
@@ -52,7 +52,7 @@ let value: CheckoutSessionUpdate = {
       },
       taxId: {
         value: "12345678931",
-        kind: "no.vat",
+        kind: "us.ein",
       },
     },
     shippingDetails: {

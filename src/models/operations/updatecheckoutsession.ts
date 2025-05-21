@@ -23,7 +23,7 @@ export type UpdateCheckoutSessionRequest = {
    * The ID of the merchant account to use for this request.
    */
   merchantAccountId?: string | null | undefined;
-  checkoutSessionUpdate: components.CheckoutSessionUpdate;
+  checkoutSessionCreate: components.CheckoutSessionCreate;
 };
 
 /** @internal */
@@ -91,12 +91,12 @@ export const UpdateCheckoutSessionRequest$inboundSchema: z.ZodType<
   session_id: z.string(),
   timeout_in_seconds: z.number().default(1),
   merchantAccountId: z.nullable(z.string()).optional(),
-  CheckoutSessionUpdate: components.CheckoutSessionUpdate$inboundSchema,
+  CheckoutSessionCreate: components.CheckoutSessionCreate$inboundSchema,
 }).transform((v) => {
   return remap$(v, {
     "session_id": "sessionId",
     "timeout_in_seconds": "timeoutInSeconds",
-    "CheckoutSessionUpdate": "checkoutSessionUpdate",
+    "CheckoutSessionCreate": "checkoutSessionCreate",
   });
 });
 
@@ -105,7 +105,7 @@ export type UpdateCheckoutSessionRequest$Outbound = {
   session_id: string;
   timeout_in_seconds: number;
   merchantAccountId?: string | null | undefined;
-  CheckoutSessionUpdate: components.CheckoutSessionUpdate$Outbound;
+  CheckoutSessionCreate: components.CheckoutSessionCreate$Outbound;
 };
 
 /** @internal */
@@ -117,12 +117,12 @@ export const UpdateCheckoutSessionRequest$outboundSchema: z.ZodType<
   sessionId: z.string(),
   timeoutInSeconds: z.number().default(1),
   merchantAccountId: z.nullable(z.string()).optional(),
-  checkoutSessionUpdate: components.CheckoutSessionUpdate$outboundSchema,
+  checkoutSessionCreate: components.CheckoutSessionCreate$outboundSchema,
 }).transform((v) => {
   return remap$(v, {
     sessionId: "session_id",
     timeoutInSeconds: "timeout_in_seconds",
-    checkoutSessionUpdate: "CheckoutSessionUpdate",
+    checkoutSessionCreate: "CheckoutSessionCreate",
   });
 });
 

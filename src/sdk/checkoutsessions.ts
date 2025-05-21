@@ -8,7 +8,6 @@ import { checkoutSessionsGet } from "../funcs/checkoutSessionsGet.js";
 import { checkoutSessionsUpdate } from "../funcs/checkoutSessionsUpdate.js";
 import { ClientSDK, RequestOptions } from "../lib/sdks.js";
 import * as components from "../models/components/index.js";
-import * as operations from "../models/operations/index.js";
 import { unwrapAsync } from "../types/fp.js";
 
 export class CheckoutSessions extends ClientSDK {
@@ -19,14 +18,14 @@ export class CheckoutSessions extends ClientSDK {
    * Create a new checkout session.
    */
   async create(
-    requestBody?: operations.CreateCheckoutSessionBody | null | undefined,
+    checkoutSessionCreate?: components.CheckoutSessionCreate | undefined,
     timeoutInSeconds?: number | undefined,
     merchantAccountId?: string | null | undefined,
     options?: RequestOptions,
   ): Promise<components.CheckoutSession> {
     return unwrapAsync(checkoutSessionsCreate(
       this,
-      requestBody,
+      checkoutSessionCreate,
       timeoutInSeconds,
       merchantAccountId,
       options,
@@ -40,7 +39,7 @@ export class CheckoutSessions extends ClientSDK {
    * Update the information stored on a checkout session.
    */
   async update(
-    checkoutSessionUpdate: components.CheckoutSessionUpdate,
+    checkoutSessionCreate: components.CheckoutSessionCreate,
     sessionId: string,
     timeoutInSeconds?: number | undefined,
     merchantAccountId?: string | null | undefined,
@@ -48,7 +47,7 @@ export class CheckoutSessions extends ClientSDK {
   ): Promise<components.CheckoutSession> {
     return unwrapAsync(checkoutSessionsUpdate(
       this,
-      checkoutSessionUpdate,
+      checkoutSessionCreate,
       sessionId,
       timeoutInSeconds,
       merchantAccountId,

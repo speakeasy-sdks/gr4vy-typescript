@@ -33,7 +33,7 @@ import { Result } from "../types/fp.js";
  */
 export function checkoutSessionsCreate(
   client: Gr4vyCore,
-  requestBody?: operations.CreateCheckoutSessionBody | null | undefined,
+  checkoutSessionCreate?: components.CheckoutSessionCreate | undefined,
   timeoutInSeconds?: number | undefined,
   merchantAccountId?: string | null | undefined,
   options?: RequestOptions,
@@ -63,7 +63,7 @@ export function checkoutSessionsCreate(
 > {
   return new APIPromise($do(
     client,
-    requestBody,
+    checkoutSessionCreate,
     timeoutInSeconds,
     merchantAccountId,
     options,
@@ -72,7 +72,7 @@ export function checkoutSessionsCreate(
 
 async function $do(
   client: Gr4vyCore,
-  requestBody?: operations.CreateCheckoutSessionBody | null | undefined,
+  checkoutSessionCreate?: components.CheckoutSessionCreate | undefined,
   timeoutInSeconds?: number | undefined,
   merchantAccountId?: string | null | undefined,
   options?: RequestOptions,
@@ -104,7 +104,7 @@ async function $do(
   ]
 > {
   const input: operations.CreateCheckoutSessionRequest | undefined = {
-    requestBody: requestBody,
+    checkoutSessionCreate: checkoutSessionCreate,
     timeoutInSeconds: timeoutInSeconds,
     merchantAccountId: merchantAccountId,
   };
@@ -121,7 +121,9 @@ async function $do(
     return [parsed, { status: "invalid" }];
   }
   const payload = parsed.value;
-  const body = encodeJSON("body", payload?.RequestBody, { explode: true });
+  const body = encodeJSON("body", payload?.CheckoutSessionCreate, {
+    explode: true,
+  });
 
   const path = pathToFunc("/checkout/sessions")();
 

@@ -163,16 +163,16 @@ async function run() {
     ],
     position: 1,
     acceptedCurrencies: [
+      "USD",
       "EUR",
       "GBP",
-      "USD",
     ],
     acceptedCountries: [
+      "US",
       "DE",
       "GB",
-      "US",
     ],
-    active: false,
+    active: true,
     merchantProfile: {
       "key": {
         merchantAcquirerBin: "516327",
@@ -252,16 +252,16 @@ async function run() {
     ],
     position: 1,
     acceptedCurrencies: [
+      "USD",
       "EUR",
       "GBP",
-      "USD",
     ],
     acceptedCountries: [
+      "US",
       "DE",
       "GB",
-      "US",
     ],
-    active: false,
+    active: true,
     merchantProfile: {
       "key": {
         merchantAcquirerBin: "516327",
@@ -446,16 +446,16 @@ async function run() {
     displayName: "Stripe",
     position: 1,
     acceptedCurrencies: [
+      "USD",
       "EUR",
       "GBP",
-      "USD",
     ],
     acceptedCountries: [
+      "US",
       "DE",
       "GB",
-      "US",
     ],
-    active: false,
+    active: true,
     threeDSecureEnabled: true,
     merchantProfile: {
       "key": {
@@ -503,16 +503,16 @@ async function run() {
     displayName: "Stripe",
     position: 1,
     acceptedCurrencies: [
+      "USD",
       "EUR",
       "GBP",
-      "USD",
     ],
     acceptedCountries: [
+      "US",
       "DE",
       "GB",
-      "US",
     ],
-    active: false,
+    active: true,
     threeDSecureEnabled: true,
     merchantProfile: {
       "key": {

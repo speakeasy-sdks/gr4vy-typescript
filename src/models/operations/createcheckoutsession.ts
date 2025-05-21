@@ -13,21 +13,13 @@ export type CreateCheckoutSessionGlobals = {
   merchantAccountId?: string | undefined;
 };
 
-export type CreateCheckoutSessionBody =
-  | components.CheckoutSessionUpdate
-  | Array<components.BaseModel>;
-
 export type CreateCheckoutSessionRequest = {
   timeoutInSeconds?: number | undefined;
   /**
    * The ID of the merchant account to use for this request.
    */
   merchantAccountId?: string | null | undefined;
-  requestBody?:
-    | components.CheckoutSessionUpdate
-    | Array<components.BaseModel>
-    | null
-    | undefined;
+  checkoutSessionCreate?: components.CheckoutSessionCreate | undefined;
 };
 
 /** @internal */
@@ -87,62 +79,6 @@ export function createCheckoutSessionGlobalsFromJSON(
 }
 
 /** @internal */
-export const CreateCheckoutSessionBody$inboundSchema: z.ZodType<
-  CreateCheckoutSessionBody,
-  z.ZodTypeDef,
-  unknown
-> = z.union([
-  components.CheckoutSessionUpdate$inboundSchema,
-  z.array(components.BaseModel$inboundSchema),
-]);
-
-/** @internal */
-export type CreateCheckoutSessionBody$Outbound =
-  | components.CheckoutSessionUpdate$Outbound
-  | Array<components.BaseModel$Outbound>;
-
-/** @internal */
-export const CreateCheckoutSessionBody$outboundSchema: z.ZodType<
-  CreateCheckoutSessionBody$Outbound,
-  z.ZodTypeDef,
-  CreateCheckoutSessionBody
-> = z.union([
-  components.CheckoutSessionUpdate$outboundSchema,
-  z.array(components.BaseModel$outboundSchema),
-]);
-
-/**
- * @internal
- * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
- */
-export namespace CreateCheckoutSessionBody$ {
-  /** @deprecated use `CreateCheckoutSessionBody$inboundSchema` instead. */
-  export const inboundSchema = CreateCheckoutSessionBody$inboundSchema;
-  /** @deprecated use `CreateCheckoutSessionBody$outboundSchema` instead. */
-  export const outboundSchema = CreateCheckoutSessionBody$outboundSchema;
-  /** @deprecated use `CreateCheckoutSessionBody$Outbound` instead. */
-  export type Outbound = CreateCheckoutSessionBody$Outbound;
-}
-
-export function createCheckoutSessionBodyToJSON(
-  createCheckoutSessionBody: CreateCheckoutSessionBody,
-): string {
-  return JSON.stringify(
-    CreateCheckoutSessionBody$outboundSchema.parse(createCheckoutSessionBody),
-  );
-}
-
-export function createCheckoutSessionBodyFromJSON(
-  jsonString: string,
-): SafeParseResult<CreateCheckoutSessionBody, SDKValidationError> {
-  return safeParse(
-    jsonString,
-    (x) => CreateCheckoutSessionBody$inboundSchema.parse(JSON.parse(x)),
-    `Failed to parse 'CreateCheckoutSessionBody' from JSON`,
-  );
-}
-
-/** @internal */
 export const CreateCheckoutSessionRequest$inboundSchema: z.ZodType<
   CreateCheckoutSessionRequest,
   z.ZodTypeDef,
@@ -150,16 +86,12 @@ export const CreateCheckoutSessionRequest$inboundSchema: z.ZodType<
 > = z.object({
   timeout_in_seconds: z.number().default(1),
   merchantAccountId: z.nullable(z.string()).optional(),
-  RequestBody: z.nullable(
-    z.union([
-      components.CheckoutSessionUpdate$inboundSchema,
-      z.array(components.BaseModel$inboundSchema),
-    ]),
-  ).optional(),
+  CheckoutSessionCreate: components.CheckoutSessionCreate$inboundSchema
+    .optional(),
 }).transform((v) => {
   return remap$(v, {
     "timeout_in_seconds": "timeoutInSeconds",
-    "RequestBody": "requestBody",
+    "CheckoutSessionCreate": "checkoutSessionCreate",
   });
 });
 
@@ -167,11 +99,7 @@ export const CreateCheckoutSessionRequest$inboundSchema: z.ZodType<
 export type CreateCheckoutSessionRequest$Outbound = {
   timeout_in_seconds: number;
   merchantAccountId?: string | null | undefined;
-  RequestBody?:
-    | components.CheckoutSessionUpdate$Outbound
-    | Array<components.BaseModel$Outbound>
-    | null
-    | undefined;
+  CheckoutSessionCreate?: components.CheckoutSessionCreate$Outbound | undefined;
 };
 
 /** @internal */
@@ -182,16 +110,12 @@ export const CreateCheckoutSessionRequest$outboundSchema: z.ZodType<
 > = z.object({
   timeoutInSeconds: z.number().default(1),
   merchantAccountId: z.nullable(z.string()).optional(),
-  requestBody: z.nullable(
-    z.union([
-      components.CheckoutSessionUpdate$outboundSchema,
-      z.array(components.BaseModel$outboundSchema),
-    ]),
-  ).optional(),
+  checkoutSessionCreate: components.CheckoutSessionCreate$outboundSchema
+    .optional(),
 }).transform((v) => {
   return remap$(v, {
     timeoutInSeconds: "timeout_in_seconds",
-    requestBody: "RequestBody",
+    checkoutSessionCreate: "CheckoutSessionCreate",
   });
 });
 

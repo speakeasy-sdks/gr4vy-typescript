@@ -8,7 +8,7 @@ import * as components from "../../models/components/index.js";
 import { formatResult, ToolDefinition } from "../tools.js";
 
 const args = {
-  checkoutSessionUpdate: components.CheckoutSessionUpdate$inboundSchema,
+  checkoutSessionCreate: components.CheckoutSessionCreate$inboundSchema,
   sessionId: z.string(),
   timeoutInSeconds: z.number().default(1),
   merchantAccountId: z.nullable(z.string()).optional(),
@@ -23,7 +23,7 @@ Update the information stored on a checkout session.`,
   tool: async (client, args, ctx) => {
     const [result, apiCall] = await checkoutSessionsUpdate(
       client,
-      args.checkoutSessionUpdate,
+      args.checkoutSessionCreate,
       args.sessionId,
       args.timeoutInSeconds,
       args.merchantAccountId,

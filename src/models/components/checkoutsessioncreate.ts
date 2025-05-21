@@ -26,7 +26,7 @@ import {
   GuestBuyerInput$outboundSchema,
 } from "./guestbuyerinput.js";
 
-export type CheckoutSessionUpdate = {
+export type CheckoutSessionCreate = {
   /**
    * An array of cart items that represents the line items of a transaction.
    */
@@ -47,8 +47,8 @@ export type CheckoutSessionUpdate = {
 };
 
 /** @internal */
-export const CheckoutSessionUpdate$inboundSchema: z.ZodType<
-  CheckoutSessionUpdate,
+export const CheckoutSessionCreate$inboundSchema: z.ZodType<
+  CheckoutSessionCreate,
   z.ZodTypeDef,
   unknown
 > = z.object({
@@ -65,7 +65,7 @@ export const CheckoutSessionUpdate$inboundSchema: z.ZodType<
 });
 
 /** @internal */
-export type CheckoutSessionUpdate$Outbound = {
+export type CheckoutSessionCreate$Outbound = {
   cart_items?: Array<CartItem$Outbound> | null | undefined;
   metadata?: { [k: string]: string } | null | undefined;
   buyer?: GuestBuyerInput$Outbound | null | undefined;
@@ -74,10 +74,10 @@ export type CheckoutSessionUpdate$Outbound = {
 };
 
 /** @internal */
-export const CheckoutSessionUpdate$outboundSchema: z.ZodType<
-  CheckoutSessionUpdate$Outbound,
+export const CheckoutSessionCreate$outboundSchema: z.ZodType<
+  CheckoutSessionCreate$Outbound,
   z.ZodTypeDef,
-  CheckoutSessionUpdate
+  CheckoutSessionCreate
 > = z.object({
   cartItems: z.nullable(z.array(CartItem$outboundSchema)).optional(),
   metadata: z.nullable(z.record(z.string())).optional(),
@@ -95,29 +95,29 @@ export const CheckoutSessionUpdate$outboundSchema: z.ZodType<
  * @internal
  * @deprecated This namespace will be removed in future versions. Use schemas and types that are exported directly from this module.
  */
-export namespace CheckoutSessionUpdate$ {
-  /** @deprecated use `CheckoutSessionUpdate$inboundSchema` instead. */
-  export const inboundSchema = CheckoutSessionUpdate$inboundSchema;
-  /** @deprecated use `CheckoutSessionUpdate$outboundSchema` instead. */
-  export const outboundSchema = CheckoutSessionUpdate$outboundSchema;
-  /** @deprecated use `CheckoutSessionUpdate$Outbound` instead. */
-  export type Outbound = CheckoutSessionUpdate$Outbound;
+export namespace CheckoutSessionCreate$ {
+  /** @deprecated use `CheckoutSessionCreate$inboundSchema` instead. */
+  export const inboundSchema = CheckoutSessionCreate$inboundSchema;
+  /** @deprecated use `CheckoutSessionCreate$outboundSchema` instead. */
+  export const outboundSchema = CheckoutSessionCreate$outboundSchema;
+  /** @deprecated use `CheckoutSessionCreate$Outbound` instead. */
+  export type Outbound = CheckoutSessionCreate$Outbound;
 }
 
-export function checkoutSessionUpdateToJSON(
-  checkoutSessionUpdate: CheckoutSessionUpdate,
+export function checkoutSessionCreateToJSON(
+  checkoutSessionCreate: CheckoutSessionCreate,
 ): string {
   return JSON.stringify(
-    CheckoutSessionUpdate$outboundSchema.parse(checkoutSessionUpdate),
+    CheckoutSessionCreate$outboundSchema.parse(checkoutSessionCreate),
   );
 }
 
-export function checkoutSessionUpdateFromJSON(
+export function checkoutSessionCreateFromJSON(
   jsonString: string,
-): SafeParseResult<CheckoutSessionUpdate, SDKValidationError> {
+): SafeParseResult<CheckoutSessionCreate, SDKValidationError> {
   return safeParse(
     jsonString,
-    (x) => CheckoutSessionUpdate$inboundSchema.parse(JSON.parse(x)),
-    `Failed to parse 'CheckoutSessionUpdate' from JSON`,
+    (x) => CheckoutSessionCreate$inboundSchema.parse(JSON.parse(x)),
+    `Failed to parse 'CheckoutSessionCreate' from JSON`,
   );
 }

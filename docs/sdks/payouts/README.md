@@ -128,7 +128,7 @@ const gr4vy = new Gr4vy({
 async function run() {
   const result = await gr4vy.payouts.create({
     amount: 1299,
-    currency: "USD",
+    currency: "EUR",
     paymentServiceId: "ed8bd87d-85ad-40cf-8e8f-007e21e55aad",
     paymentMethod: {
       id: "852b951c-d7ea-4c98-b09e-4a1c9e97c077",
@@ -182,7 +182,7 @@ async function run() {
     merchant: {
       name: "Acme Inc",
       identificationNumber: "12345",
-      phoneNumber: "+442071838750",
+      phoneNumber: "+14155552671",
       url: "https://example.com",
       statementDescriptor: "Winnings",
       merchantCategoryCode: "123456",
@@ -235,7 +235,7 @@ const gr4vy = new Gr4vyCore({
 async function run() {
   const res = await payoutsCreate(gr4vy, {
     amount: 1299,
-    currency: "USD",
+    currency: "EUR",
     paymentServiceId: "ed8bd87d-85ad-40cf-8e8f-007e21e55aad",
     paymentMethod: {
       id: "852b951c-d7ea-4c98-b09e-4a1c9e97c077",
@@ -289,7 +289,7 @@ async function run() {
     merchant: {
       name: "Acme Inc",
       identificationNumber: "12345",
-      phoneNumber: "+442071838750",
+      phoneNumber: "+14155552671",
       url: "https://example.com",
       statementDescriptor: "Winnings",
       merchantCategoryCode: "123456",

@@ -54,8 +54,6 @@ async function run() {
     amountLte: 1299,
     amountGte: 1299,
     currency: [
-      "EUR",
-      "GBP",
       "USD",
     ],
     paymentServiceId: [
@@ -138,8 +136,6 @@ async function run() {
     amountLte: 1299,
     amountGte: 1299,
     currency: [
-      "EUR",
-      "GBP",
       "USD",
     ],
     paymentServiceId: [
@@ -324,6 +320,7 @@ async function run() {
     },
     airline: {
       bookingCode: "X36Q9C",
+      isCardholderTraveling: true,
       issuedAddress: "123 Broadway, New York",
       issuedAt: new Date("2013-07-16T19:23:00.000+00:00"),
       issuingCarrierCode: "649",
@@ -674,6 +671,7 @@ async function run() {
     },
     airline: {
       bookingCode: "X36Q9C",
+      isCardholderTraveling: true,
       issuedAddress: "123 Broadway, New York",
       issuedAt: new Date("2013-07-16T19:23:00.000+00:00"),
       issuingCarrierCode: "649",
@@ -1071,6 +1069,7 @@ async function run() {
     amount: 1299,
     airline: {
       bookingCode: "X36Q9C",
+      isCardholderTraveling: true,
       issuedAddress: "123 Broadway, New York",
       issuedAt: new Date("2013-07-16T19:23:00.000+00:00"),
       issuingCarrierCode: "649",
@@ -1226,6 +1225,7 @@ async function run() {
     amount: 1299,
     airline: {
       bookingCode: "X36Q9C",
+      isCardholderTraveling: true,
       issuedAddress: "123 Broadway, New York",
       issuedAt: new Date("2013-07-16T19:23:00.000+00:00"),
       issuingCarrierCode: "649",
