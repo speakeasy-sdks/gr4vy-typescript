@@ -7,7 +7,6 @@ import { SDK_METADATA } from "./config";
 import { getKeyId, getRuntime } from "./helpers";
 
 const ua = getRuntime();
-const issuer = `Gr4vy Node SDK ${SDK_METADATA.sdkVersion} - ${ua}`;
 
 /**
  * Helper method for generating a bearer token for use with the SDK
@@ -71,7 +70,7 @@ export const getToken = async (options: {
     jwtid: uuid(),
     expiresIn,
     notBefore: "0s",
-    issuer,
+    issuer: SDK_METADATA.userAgent,
   });
 };
 

@@ -3,7 +3,7 @@ import snakecaseKeys from "snakecase-keys";
 import timekeeper from "timekeeper";
 import { describe, expect, test } from "vitest";
 import { version } from "../package.json";
-import { getEmbedToken, getToken, JWTScope, updateToken } from "../src";
+import { getEmbedToken, getToken, JWTScope, updateToken, SDK_METADATA } from "../src";
 
 const privateKey = `-----BEGIN PRIVATE KEY-----
 MIHuAgEAMBAGByqGSM49AgEGBSuBBAAjBIHWMIHTAgEBBEIBABM9jQu+HT87oIik
@@ -64,9 +64,7 @@ describe(".getToken", () => {
     expect(typeof decoded.payload.iat).toBe("number");
     expect(typeof decoded.payload.nbf).toBe("number");
     expect(typeof decoded.payload.exp).toBe("number");
-    expect(decoded.payload.iss.startsWith("Gr4vy Node SDK")).toBeTruthy();
-    expect(decoded.payload.iss).toMatch("Gr4vy Node SDK");
-    expect(decoded.payload.iss).toMatch(version);
+    expect(decoded.payload.iss).toMatch(SDK_METADATA.userAgent);
   });
 
   test("should accept optional embed data", async () => {
