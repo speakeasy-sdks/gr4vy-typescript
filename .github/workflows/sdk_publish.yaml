@@ -40,6 +40,7 @@ jobs:
             SLACK_COLOR: "${{ contains(needs.*.result, 'failure') && 'failure' || 'success' }}"
             SLACK_MESSAGE_ON_SUCCESS: "SDK publishing succeeded - `${{ github.event.head_commit.message }}`"
             SLACK_MESSAGE_ON_FAILURE: "SDK publishing failed - `${{ github.event.head_commit.message }}`"
+            SLACK_FOOTER: ""
 
   dispatch:
     needs: publish

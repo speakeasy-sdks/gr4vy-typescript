@@ -82,7 +82,7 @@ jobs:
     steps:
       - name: Slack Notification
         uses: rtCamp/action-slack-notify@v2
-        if: github.ref == 'refs/heads/main'
+        if: github.ref == 'refs/heads/main' || (github.event_name == 'pull_request' && github.event.pull_request.user.login == 'github-actions[bot]')
         env:
             SLACK_USERNAME: Typescript SDK 
             SLACK_TITLE: Typescript SDK

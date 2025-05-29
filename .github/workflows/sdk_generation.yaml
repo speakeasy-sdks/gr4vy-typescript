@@ -52,4 +52,5 @@ jobs:
                 SLACK_ICON_EMOJI: ":gr4vy:"
                 SLACK_COLOR: "${{ contains(needs.*.result, 'failure') && 'failure' || 'success' }}"
                 SLACK_MESSAGE_ON_SUCCESS: "SDK generation succeeded - `${{ github.event.head_commit.message }}`"
-                SLACK_MESSAGE_ON_FAILURE: "SDK generation failed - `${{ github.event.head_commit.message }}`s"
+                SLACK_MESSAGE_ON_FAILURE: "SDK generation failed - `${{ github.event.head_commit.message }}`"
+                SLACK_FOOTER: ""
