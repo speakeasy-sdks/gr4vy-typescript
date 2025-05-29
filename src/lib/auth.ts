@@ -4,9 +4,7 @@ import { v4 as uuid } from "uuid";
 
 import { CartItem } from "../models/components";
 import { SDK_METADATA } from "./config";
-import { getKeyId, getRuntime } from "./helpers";
-
-const ua = getRuntime();
+import { getKeyId } from "./helpers";
 
 /**
  * Helper method for generating a bearer token for use with the SDK
