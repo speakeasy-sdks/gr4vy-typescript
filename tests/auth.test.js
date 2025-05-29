@@ -57,7 +57,7 @@ describe(".getToken", () => {
       complete: true,
     });
 
-    expect(decoded.header.alg).toBe("ES51");
+    expect(decoded.header.alg).toBe("ES512");
     expect(decoded.header.typ).toBe("JWT");
     expect(decoded.header.kid).toBe(thumbprint);
     expect(decoded.payload.scopes).toEqual(["*.read", "*.write"]);
