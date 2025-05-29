@@ -96,6 +96,7 @@ jobs:
       - name: Slack Notification
         uses: rtCamp/action-slack-notify@v2
         env:
+            SLACK_USERNAME: Typescript SDK 
             SLACK_WEBHOOK: ${{ secrets.SLACK_SDK_WEBHOOK_URL }}
             SLACK_CHANNEL: sdk-updates
             SLACK_MSG_AUTHOR: gr4vy-code
@@ -103,3 +104,4 @@ jobs:
             SLACK_COLOR: ${{ job.status }}
             SLACK_MESSAGE_ON_SUCCESS: "CI passed"
             SLACK_MESSAGE_ON_FAILURE: "CI failed"
+            SLACK_FOOTER: ""
