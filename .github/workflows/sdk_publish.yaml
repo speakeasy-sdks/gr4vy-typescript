@@ -37,8 +37,8 @@ jobs:
             SLACK_MSG_AUTHOR: gr4vy-code
             SLACK_ICON_EMOJI: ":gr4vy:"
             SLACK_COLOR: "${{ contains(needs.*.result, 'failure') && 'failure' || 'success' }}"
-            SLACK_MESSAGE_ON_SUCCESS: "SDK publishing succeeded"
-            SLACK_MESSAGE_ON_FAILURE: "SDK publishing failed"
+            SLACK_MESSAGE_ON_SUCCESS: "SDK publishing succeeded - ${{ github.event.head_commit.message }}"
+            SLACK_MESSAGE_ON_FAILURE: "SDK publishing failed - ${{ github.event.head_commit.message }}"
 
   dispatch:
     needs: publish
