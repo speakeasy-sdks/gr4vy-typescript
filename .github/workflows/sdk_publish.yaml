@@ -21,6 +21,22 @@ jobs:
       github_access_token: ${{ secrets.GITHUB_TOKEN }}
       npm_token: ${{ secrets.NPM_TOKEN }}
       speakeasy_api_key: ${{ secrets.SPEAKEASY_API_KEY }}
+  
+  notify:
+    needs: publish
+    runs-on: ubuntu-latest
+    if: always()
+    steps:
+      - name: Slack Notification
+        uses: rtCamp/action-slack-notify@v2
+        env:
+            SLACK_WEBHOOK: ${{ secrets.SLACK_SDK_WEBHOOK_URL }}
+            SLACK_CHANNEL: sdk-updates
+            SLACK_MSG_AUTHOR: gr4vy-code
+            SLACK_ICON_EMOJI: ":gr4vy:"
+            SLACK_COLOR: ${{ job.status }}
+            SLACK_MESSAGE_ON_SUCCESS: "SDK publishing succeeded"
+            SLACK_MESSAGE_ON_FAILURE: "SDK publishing failed"
 
   dispatch:
     needs: publish
