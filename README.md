@@ -1154,7 +1154,7 @@ To run the tests, install NPM, ensure to download the `private_key.pem` for the 
 
 ```sh
 npm install
-npx vitest
+npx vitest --testTimeout 8000
 ```
 
 ## Maturity
