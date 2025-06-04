@@ -41,7 +41,7 @@ typescript:
     - ./.speakeasy/compile.sh
   defaultErrorName: SDKError
   enableCustomCodeRegions: false
-  enableMCPServer: true
+  enableMCPServer: false
   enableReactQuery: false
   enumFormat: union
   envVarPrefix: GR4VY
