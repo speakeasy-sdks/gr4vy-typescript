@@ -1,7 +1,6 @@
-# Gr4vy Typescript SDK (Beta)
+# Gr4vy Typescript SDK
 
 Developer-friendly & type-safe Typescript SDK specifically catered to leverage the **Gr4vy** API.
-
 
 <div align="left">
     <a href="https://www.npmjs.com/package/@gr4vy/sdk"><img alt="NPM Version" src="https://img.shields.io/npm/v/%40gr4vy%2Fsdk?style=for-the-badge" /></a>
@@ -27,7 +26,7 @@ This SDK is designed to simplify development, reduce boilerplate code, and help 
 <!-- Start Table of Contents [toc] -->
 ## Table of Contents
 <!-- $toc-max-depth=2 -->
-* [Gr4vy Typescript SDK (Beta)](#gr4vy-typescript-sdk-beta)
+* [Gr4vy Typescript SDK](#gr4vy-typescript-sdk)
   * [SDK Installation](#sdk-installation)
   * [Requirements](#requirements)
   * [SDK Example Usage](#sdk-example-usage)
@@ -881,7 +880,7 @@ Gr4vy: The Gr4vy API.
 <!-- Start Table of Contents [toc] -->
 ## Table of Contents
 <!-- $toc-max-depth=2 -->
-* [Gr4vy Typescript SDK (Beta)](#gr4vy-typescript-sdk-beta)
+* [Gr4vy Typescript SDK](#gr4vy-typescript-sdk)
   * [SDK Installation](#sdk-installation)
   * [Requirements](#requirements)
   * [SDK Example Usage](#sdk-example-usage)
