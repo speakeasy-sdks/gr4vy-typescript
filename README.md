@@ -1,6 +1,6 @@
-# Gr4vy Typescript SDK
+# Gr4vy TypeScript SDK
 
-Developer-friendly & type-safe Typescript SDK specifically catered to leverage the **Gr4vy** API.
+Developer-friendly & type-safe TypeScript SDK specifically catered to leverage the **Gr4vy** API.
 
 <div align="left">
     <a href="https://www.npmjs.com/package/@gr4vy/sdk"><img alt="NPM Version" src="https://img.shields.io/npm/v/%40gr4vy%2Fsdk?style=for-the-badge" /></a>
@@ -9,9 +9,7 @@ Developer-friendly & type-safe Typescript SDK specifically catered to leverage t
 
 ## Summary
 
-Gr4vy Typescript SDK
-
-The official Gr4vy SDK for Typescript provides a convenient way to interact with the Gr4vy API from your server-side application. This SDK allows you to seamlessly integrate Gr4vy's powerful payment orchestration capabilities, including:
+The official Gr4vy SDK for TypeScript provides a convenient way to interact with the Gr4vy API from your server-side application. This SDK allows you to seamlessly integrate Gr4vy's powerful payment orchestration capabilities, including:
 
 * Creating Transactions: Initiate and process payments with various payment methods and services.
 * Managing Buyers: Store and manage buyer information securely.
@@ -26,7 +24,7 @@ This SDK is designed to simplify development, reduce boilerplate code, and help 
 <!-- Start Table of Contents [toc] -->
 ## Table of Contents
 <!-- $toc-max-depth=2 -->
-* [Gr4vy Typescript SDK](#gr4vy-typescript-sdk)
+* [Gr4vy TypeScript SDK](#gr4vy-typescript-sdk)
   * [SDK Installation](#sdk-installation)
   * [Requirements](#requirements)
   * [SDK Example Usage](#sdk-example-usage)
@@ -879,7 +877,7 @@ Gr4vy: The Gr4vy API.
 <!-- Start Table of Contents [toc] -->
 ## Table of Contents
 <!-- $toc-max-depth=2 -->
-* [Gr4vy Typescript SDK](#gr4vy-typescript-sdk)
+* [Gr4vy TypeScript SDK](#gr4vy-typescript-sdk)
   * [SDK Installation](#sdk-installation)
   * [Requirements](#requirements)
   * [SDK Example Usage](#sdk-example-usage)
