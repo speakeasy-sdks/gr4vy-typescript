@@ -49,19 +49,38 @@ This SDK is designed to simplify development, reduce boilerplate code, and help 
 
 <!-- End Table of Contents [toc] -->
 
+<!-- Start SDK Installation [installation] -->
 ## SDK Installation
+
+The SDK can be installed with either [npm](https://www.npmjs.com/), [pnpm](https://pnpm.io/), [bun](https://bun.sh/) or [yarn](https://classic.yarnpkg.com/en/) package managers.
 
 ### NPM
 
 ```bash
-yarn add @gr4vy/sdk
+npm add @gr4vy/sdk
+```
+
+### PNPM
+
+```bash
+pnpm add @gr4vy/sdk
+```
+
+### Bun
+
+```bash
+bun add @gr4vy/sdk
 ```
 
 ### Yarn
 
 ```bash
-yarn add @gr4vy/sdk
+yarn add @gr4vy/sdk zod
+
+# Note that Yarn does not install peer dependencies automatically. You will need
+# to install zod as shown above.
 ```
+<!-- End SDK Installation [installation] -->
 
 <!-- Start Requirements [requirements] -->
 ## Requirements
