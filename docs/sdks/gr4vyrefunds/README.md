@@ -17,16 +17,15 @@ List refunds for a transaction.
 
 <!-- UsageSnippet language="typescript" operationID="list_transaction_refunds" method="get" path="/transactions/{transaction_id}/refunds" -->
 ```typescript
-import { Gr4vy, withToken } from "@gr4vy/sdk";
-import fs from "fs";
+import { Gr4vy } from "@gr4vy/sdk";
 
 const gr4vy = new Gr4vy({
-    id: "example",
-    server: "sandbox",
-    merchantAccountId: "default",
-    bearerAuth: withToken({
-      privateKey: fs.readFileSync("private_key.pem", "utf8"),
-    }),
+  merchantAccountId: "<id>",
+  server: "sandbox",
+  id: "example",
+  bearerAuth: withToken({
+    privateKey: fs.readFileSync("private_key.pem", "utf8"),
+  }),
 });
 
 async function run() {
@@ -44,13 +43,18 @@ The standalone function version of this method:
 
 ```typescript
 import { Gr4vyCore } from "@gr4vy/sdk/core.js";
+import { withToken } from "@gr4vy/sdk/lib/auth.js";
 import { transactionsRefundsList } from "@gr4vy/sdk/funcs/transactionsRefundsList.js";
 
 // Use `Gr4vyCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const gr4vy = new Gr4vyCore({
   merchantAccountId: "<id>",
-  bearerAuth: process.env["GR4VY_BEARER_AUTH"] ?? "",
+  server: "sandbox",
+  id: "example",
+  bearerAuth: withToken({
+    privateKey: fs.readFileSync("private_key.pem", "utf8"),
+  }),
 });
 
 async function run() {
@@ -106,16 +110,15 @@ Create a refund for a transaction.
 
 <!-- UsageSnippet language="typescript" operationID="create_transaction_refund" method="post" path="/transactions/{transaction_id}/refunds" -->
 ```typescript
-import { Gr4vy, withToken } from "@gr4vy/sdk";
-import fs from "fs";
+import { Gr4vy } from "@gr4vy/sdk";
 
 const gr4vy = new Gr4vy({
-    id: "example",
-    server: "sandbox",
-    merchantAccountId: "default",
-    bearerAuth: withToken({
-      privateKey: fs.readFileSync("private_key.pem", "utf8"),
-    }),
+  merchantAccountId: "<id>",
+  server: "sandbox",
+  id: "example",
+  bearerAuth: withToken({
+    privateKey: fs.readFileSync("private_key.pem", "utf8"),
+  }),
 });
 
 async function run() {
@@ -133,13 +136,18 @@ The standalone function version of this method:
 
 ```typescript
 import { Gr4vyCore } from "@gr4vy/sdk/core.js";
+import { withToken } from "@gr4vy/sdk/lib/auth.js";
 import { transactionsRefundsCreate } from "@gr4vy/sdk/funcs/transactionsRefundsCreate.js";
 
 // Use `Gr4vyCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const gr4vy = new Gr4vyCore({
   merchantAccountId: "<id>",
-  bearerAuth: process.env["GR4VY_BEARER_AUTH"] ?? "",
+  server: "sandbox",
+  id: "example",
+  bearerAuth: withToken({
+    privateKey: fs.readFileSync("private_key.pem", "utf8"),
+  }),
 });
 
 async function run() {
@@ -196,16 +204,15 @@ Fetch refund for a transaction.
 
 <!-- UsageSnippet language="typescript" operationID="get_transaction_refund" method="get" path="/transactions/{transaction_id}/refunds/{refund_id}" -->
 ```typescript
-import { Gr4vy, withToken } from "@gr4vy/sdk";
-import fs from "fs";
+import { Gr4vy } from "@gr4vy/sdk";
 
 const gr4vy = new Gr4vy({
-    id: "example",
-    server: "sandbox",
-    merchantAccountId: "default",
-    bearerAuth: withToken({
-      privateKey: fs.readFileSync("private_key.pem", "utf8"),
-    }),
+  merchantAccountId: "<id>",
+  server: "sandbox",
+  id: "example",
+  bearerAuth: withToken({
+    privateKey: fs.readFileSync("private_key.pem", "utf8"),
+  }),
 });
 
 async function run() {
@@ -223,13 +230,18 @@ The standalone function version of this method:
 
 ```typescript
 import { Gr4vyCore } from "@gr4vy/sdk/core.js";
+import { withToken } from "@gr4vy/sdk/lib/auth.js";
 import { transactionsRefundsGet } from "@gr4vy/sdk/funcs/transactionsRefundsGet.js";
 
 // Use `Gr4vyCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const gr4vy = new Gr4vyCore({
   merchantAccountId: "<id>",
-  bearerAuth: process.env["GR4VY_BEARER_AUTH"] ?? "",
+  server: "sandbox",
+  id: "example",
+  bearerAuth: withToken({
+    privateKey: fs.readFileSync("private_key.pem", "utf8"),
+  }),
 });
 
 async function run() {

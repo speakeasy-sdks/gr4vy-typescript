@@ -8,19 +8,14 @@ dotenv.config();
  * Example usage of the @gr4vy/sdk SDK
  *
  * To run this example from the examples directory:
- * npm run build && npx tsx accountUpdaterJobsCreate.example.ts
+ * npm run build && npx tsx accountUpdaterJobsCreate.ts
  */
 
-import { Gr4vy, withToken } from "@gr4vy/sdk";
-import fs from "fs";
+import { Gr4vy } from "@gr4vy/sdk";
 
 const gr4vy = new Gr4vy({
-  id: "example",
-  server: "sandbox",
-  merchantAccountId: "default",
-  bearerAuth: withToken({
-    privateKey: fs.readFileSync("private_key.pem", "utf8"),
-  }),
+  merchantAccountId: "<id>",
+  bearerAuth: process.env["GR4VY_BEARER_AUTH"] ?? "",
 });
 
 async function main() {

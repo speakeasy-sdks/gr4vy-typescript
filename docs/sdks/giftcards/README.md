@@ -18,16 +18,15 @@ Fetch details about a gift card.
 
 <!-- UsageSnippet language="typescript" operationID="get_gift_card" method="get" path="/gift-cards/{gift_card_id}" -->
 ```typescript
-import { Gr4vy, withToken } from "@gr4vy/sdk";
-import fs from "fs";
+import { Gr4vy } from "@gr4vy/sdk";
 
 const gr4vy = new Gr4vy({
-    id: "example",
-    server: "sandbox",
-    merchantAccountId: "default",
-    bearerAuth: withToken({
-      privateKey: fs.readFileSync("private_key.pem", "utf8"),
-    }),
+  merchantAccountId: "<id>",
+  server: "sandbox",
+  id: "example",
+  bearerAuth: withToken({
+    privateKey: fs.readFileSync("private_key.pem", "utf8"),
+  }),
 });
 
 async function run() {
@@ -45,13 +44,18 @@ The standalone function version of this method:
 
 ```typescript
 import { Gr4vyCore } from "@gr4vy/sdk/core.js";
+import { withToken } from "@gr4vy/sdk/lib/auth.js";
 import { giftCardsGet } from "@gr4vy/sdk/funcs/giftCardsGet.js";
 
 // Use `Gr4vyCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const gr4vy = new Gr4vyCore({
   merchantAccountId: "<id>",
-  bearerAuth: process.env["GR4VY_BEARER_AUTH"] ?? "",
+  server: "sandbox",
+  id: "example",
+  bearerAuth: withToken({
+    privateKey: fs.readFileSync("private_key.pem", "utf8"),
+  }),
 });
 
 async function run() {
@@ -107,16 +111,15 @@ Removes a gift card from our system.
 
 <!-- UsageSnippet language="typescript" operationID="delete_gift_card" method="delete" path="/gift-cards/{gift_card_id}" -->
 ```typescript
-import { Gr4vy, withToken } from "@gr4vy/sdk";
-import fs from "fs";
+import { Gr4vy } from "@gr4vy/sdk";
 
 const gr4vy = new Gr4vy({
-    id: "example",
-    server: "sandbox",
-    merchantAccountId: "default",
-    bearerAuth: withToken({
-      privateKey: fs.readFileSync("private_key.pem", "utf8"),
-    }),
+  merchantAccountId: "<id>",
+  server: "sandbox",
+  id: "example",
+  bearerAuth: withToken({
+    privateKey: fs.readFileSync("private_key.pem", "utf8"),
+  }),
 });
 
 async function run() {
@@ -134,13 +137,18 @@ The standalone function version of this method:
 
 ```typescript
 import { Gr4vyCore } from "@gr4vy/sdk/core.js";
+import { withToken } from "@gr4vy/sdk/lib/auth.js";
 import { giftCardsDelete } from "@gr4vy/sdk/funcs/giftCardsDelete.js";
 
 // Use `Gr4vyCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const gr4vy = new Gr4vyCore({
   merchantAccountId: "<id>",
-  bearerAuth: process.env["GR4VY_BEARER_AUTH"] ?? "",
+  server: "sandbox",
+  id: "example",
+  bearerAuth: withToken({
+    privateKey: fs.readFileSync("private_key.pem", "utf8"),
+  }),
 });
 
 async function run() {
@@ -196,16 +204,15 @@ Store a new gift card in the vault.
 
 <!-- UsageSnippet language="typescript" operationID="create_gift_card" method="post" path="/gift-cards" -->
 ```typescript
-import { Gr4vy, withToken } from "@gr4vy/sdk";
-import fs from "fs";
+import { Gr4vy } from "@gr4vy/sdk";
 
 const gr4vy = new Gr4vy({
-    id: "example",
-    server: "sandbox",
-    merchantAccountId: "default",
-    bearerAuth: withToken({
-      privateKey: fs.readFileSync("private_key.pem", "utf8"),
-    }),
+  merchantAccountId: "<id>",
+  server: "sandbox",
+  id: "example",
+  bearerAuth: withToken({
+    privateKey: fs.readFileSync("private_key.pem", "utf8"),
+  }),
 });
 
 async function run() {
@@ -226,13 +233,18 @@ The standalone function version of this method:
 
 ```typescript
 import { Gr4vyCore } from "@gr4vy/sdk/core.js";
+import { withToken } from "@gr4vy/sdk/lib/auth.js";
 import { giftCardsCreate } from "@gr4vy/sdk/funcs/giftCardsCreate.js";
 
 // Use `Gr4vyCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const gr4vy = new Gr4vyCore({
   merchantAccountId: "<id>",
-  bearerAuth: process.env["GR4VY_BEARER_AUTH"] ?? "",
+  server: "sandbox",
+  id: "example",
+  bearerAuth: withToken({
+    privateKey: fs.readFileSync("private_key.pem", "utf8"),
+  }),
 });
 
 async function run() {
@@ -291,16 +303,15 @@ Browser all gift cards.
 
 <!-- UsageSnippet language="typescript" operationID="list_gift_cards" method="get" path="/gift-cards" -->
 ```typescript
-import { Gr4vy, withToken } from "@gr4vy/sdk";
-import fs from "fs";
+import { Gr4vy } from "@gr4vy/sdk";
 
 const gr4vy = new Gr4vy({
-    id: "example",
-    server: "sandbox",
-    merchantAccountId: "default",
-    bearerAuth: withToken({
-      privateKey: fs.readFileSync("private_key.pem", "utf8"),
-    }),
+  merchantAccountId: "<id>",
+  server: "sandbox",
+  id: "example",
+  bearerAuth: withToken({
+    privateKey: fs.readFileSync("private_key.pem", "utf8"),
+  }),
 });
 
 async function run() {
@@ -320,13 +331,18 @@ The standalone function version of this method:
 
 ```typescript
 import { Gr4vyCore } from "@gr4vy/sdk/core.js";
+import { withToken } from "@gr4vy/sdk/lib/auth.js";
 import { giftCardsList } from "@gr4vy/sdk/funcs/giftCardsList.js";
 
 // Use `Gr4vyCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const gr4vy = new Gr4vyCore({
   merchantAccountId: "<id>",
-  bearerAuth: process.env["GR4VY_BEARER_AUTH"] ?? "",
+  server: "sandbox",
+  id: "example",
+  bearerAuth: withToken({
+    privateKey: fs.readFileSync("private_key.pem", "utf8"),
+  }),
 });
 
 async function run() {

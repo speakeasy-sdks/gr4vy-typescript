@@ -16,16 +16,15 @@ Register a digital wallet domain (Apple Pay only).
 
 <!-- UsageSnippet language="typescript" operationID="register_digital_wallet_domain" method="post" path="/digital-wallets/{digital_wallet_id}/domains" -->
 ```typescript
-import { Gr4vy, withToken } from "@gr4vy/sdk";
-import fs from "fs";
+import { Gr4vy } from "@gr4vy/sdk";
 
 const gr4vy = new Gr4vy({
-    id: "example",
-    server: "sandbox",
-    merchantAccountId: "default",
-    bearerAuth: withToken({
-      privateKey: fs.readFileSync("private_key.pem", "utf8"),
-    }),
+  merchantAccountId: "<id>",
+  server: "sandbox",
+  id: "example",
+  bearerAuth: withToken({
+    privateKey: fs.readFileSync("private_key.pem", "utf8"),
+  }),
 });
 
 async function run() {
@@ -45,13 +44,18 @@ The standalone function version of this method:
 
 ```typescript
 import { Gr4vyCore } from "@gr4vy/sdk/core.js";
+import { withToken } from "@gr4vy/sdk/lib/auth.js";
 import { digitalWalletsDomainsCreate } from "@gr4vy/sdk/funcs/digitalWalletsDomainsCreate.js";
 
 // Use `Gr4vyCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const gr4vy = new Gr4vyCore({
   merchantAccountId: "<id>",
-  bearerAuth: process.env["GR4VY_BEARER_AUTH"] ?? "",
+  server: "sandbox",
+  id: "example",
+  bearerAuth: withToken({
+    privateKey: fs.readFileSync("private_key.pem", "utf8"),
+  }),
 });
 
 async function run() {
@@ -110,16 +114,15 @@ Remove a digital wallet domain (Apple Pay only).
 
 <!-- UsageSnippet language="typescript" operationID="unregister_digital_wallet_domain" method="delete" path="/digital-wallets/{digital_wallet_id}/domains" -->
 ```typescript
-import { Gr4vy, withToken } from "@gr4vy/sdk";
-import fs from "fs";
+import { Gr4vy } from "@gr4vy/sdk";
 
 const gr4vy = new Gr4vy({
-    id: "example",
-    server: "sandbox",
-    merchantAccountId: "default",
-    bearerAuth: withToken({
-      privateKey: fs.readFileSync("private_key.pem", "utf8"),
-    }),
+  merchantAccountId: "<id>",
+  server: "sandbox",
+  id: "example",
+  bearerAuth: withToken({
+    privateKey: fs.readFileSync("private_key.pem", "utf8"),
+  }),
 });
 
 async function run() {
@@ -139,13 +142,18 @@ The standalone function version of this method:
 
 ```typescript
 import { Gr4vyCore } from "@gr4vy/sdk/core.js";
+import { withToken } from "@gr4vy/sdk/lib/auth.js";
 import { digitalWalletsDomainsDelete } from "@gr4vy/sdk/funcs/digitalWalletsDomainsDelete.js";
 
 // Use `Gr4vyCore` for best tree-shaking performance.
 // You can create one instance of it to use across an application.
 const gr4vy = new Gr4vyCore({
   merchantAccountId: "<id>",
-  bearerAuth: process.env["GR4VY_BEARER_AUTH"] ?? "",
+  server: "sandbox",
+  id: "example",
+  bearerAuth: withToken({
+    privateKey: fs.readFileSync("private_key.pem", "utf8"),
+  }),
 });
 
 async function run() {
