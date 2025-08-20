@@ -21,7 +21,7 @@ generation:
     generateNewTests: false
     skipResponseBodyAssertions: false
 typescript:
-  version: 1.1.33
+  version: 1.1.35
   additionalDependencies:
     dependencies:
       '@trust/keyto': ^1.0.1
@@ -30,7 +30,7 @@ typescript:
       snakecase-keys: ^6.0.0
       uuid: ^11.1.0
     devDependencies:
-      '@types/jsonwebtoken': ^9.0.6
+      '@types/jsonwebtoken': ^9.0.10
       '@types/trust__keyto': ^1.0.4
       '@types/uuid': ^10.0.0
       timekeeper: ^2.3.1

@@ -5,8 +5,8 @@ management:
   docVersion: 1.0.0
   speakeasyVersion: 1.606.0
   generationVersion: 2.686.7
-  releaseVersion: 1.1.33
-  configChecksum: ab6f8c263c3821707f31dee41163fdd5
+  releaseVersion: 1.1.35
+  configChecksum: 947b3d7c4ccf0da0ab6b99c126fb3693
   repoURL: https://github.com/gr4vy/gr4vy-typescript.git
   installationURL: https://github.com/gr4vy/gr4vy-typescript
   published: true

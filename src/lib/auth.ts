@@ -1,4 +1,5 @@
 import jwt, { JwtPayload } from "jsonwebtoken";
+import type { StringValue } from "ms";
 import snakeCaseKeys from "snakecase-keys";
 import { v4 as uuid } from "uuid";
 
@@ -12,7 +13,7 @@ import { getKeyId } from "./helpers";
 export const withToken = (options: {
   privateKey: string;
   scopes?: JWTScope[] | string[];
-  expiresIn?: string;
+  expiresIn?: StringValue;
 }): (() => Promise<string>) => {
   const {
     privateKey,
@@ -35,7 +36,7 @@ export const withToken = (options: {
  */
 export const getToken = async (options: {
   privateKey: string;
-  expiresIn?: string;
+  expiresIn?: StringValue;
   scopes?: JWTScope[] | string[];
   embedParams?: EmbedParams;
   checkoutSessionId?: string;
@@ -66,7 +67,7 @@ export const getToken = async (options: {
     algorithm: "ES512",
     keyid,
     jwtid: uuid(),
-    expiresIn,
+    expiresIn: expiresIn,
     notBefore: "0s",
     issuer: SDK_METADATA.userAgent,
   });
@@ -75,7 +76,7 @@ export const getToken = async (options: {
 export const updateToken = async (options: {
   token: string
   privateKey: string;
-  expiresIn?: string;
+  expiresIn?: StringValue;
   scopes?: JWTScope[] | string[];
   embedParams?: EmbedParams;
   checkoutSessionId?: string;
