@@ -28,7 +28,7 @@ typescript:
       jsonwebtoken: ^9.0.2
       jwk-thumbprint: ^0.1.4
       snakecase-keys: ^6.0.0
-      uuid: ^9.0.1
+      uuid: ^11.1.0
     devDependencies:
       '@types/jsonwebtoken': ^9.0.6
       '@types/trust__keyto': ^1.0.4
