@@ -15,7 +15,7 @@ sources:
             - location: ./.speakeasy/overlays/fix-remove-unwanted-headers.yaml
             - location: ./.speakeasy/overlays/fix-add-x-forwarded-for-header.yaml
         registry:
-            location: registry.speakeasyapi.dev/gr4vy/gr4vy/openapi
+            location: registry.speakeasyapi.dev/speakeasy-self/speakeasy-self/openapi
 targets:
     typescript:
         target: typescript
@@ -25,7 +25,7 @@ targets:
                 token: $npm_token
         codeSamples:
             registry:
-                location: registry.speakeasyapi.dev/gr4vy/gr4vy/openapi-typescript-code-samples
+                location: registry.speakeasyapi.dev/speakeasy-self/speakeasy-self/openapi-typescript-code-samples
             labelOverride:
                 fixedValue: TypeScript
             blocking: false
