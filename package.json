@@ -13,9 +13,6 @@
     "build": "tsc",
     "prepublishOnly": "npm run build"
   },
-  "peerDependencies": {
-    
-  },
   "devDependencies": {
     "@eslint/js": "^9.19.0",
     "@types/jsonwebtoken": "^9.0.10",
@@ -30,6 +27,7 @@
   },
   "dependencies": {
     "@trust/keyto": "^1.0.1",
+    "esbuild": "^0.25.3",
     "jsonwebtoken": "^9.0.2",
     "jwk-thumbprint": "^0.1.4",
     "snakecase-keys": "^6.0.0",
