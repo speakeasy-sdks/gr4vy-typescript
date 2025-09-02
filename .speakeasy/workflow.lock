@@ -1,4 +1,4 @@
-speakeasyVersion: 1.606.8
+speakeasyVersion: 1.607.0
 sources:
     openapi:
         sourceNamespace: openapi
@@ -6,7 +6,7 @@ sources:
         sourceBlobDigest: sha256:3d2e4fb8983a46b222c02e074af1313ae0cb1a89af0353e1963ee7d98c2f524b
         tags:
             - latest
-            - speakeasy-sdk-regen-1756316734
+            - speakeasy-sdk-regen-1756744950
             - 1.0.0
 targets:
     first-target:
@@ -20,7 +20,7 @@ targets:
         sourceRevisionDigest: sha256:b72cf210291e1ad6ddd696fc48314a1eb294a9d61a1b04ea61747cdee4643bfb
         sourceBlobDigest: sha256:3d2e4fb8983a46b222c02e074af1313ae0cb1a89af0353e1963ee7d98c2f524b
         codeSamplesNamespace: openapi-typescript-code-samples
-        codeSamplesRevisionDigest: sha256:d4f211b3c1f798e078063180b189cc20253b35c9ed4b1ce7d503a9d2b3032402
+        codeSamplesRevisionDigest: sha256:abe070119603a57b4d41353a4b2b2be56202801bbc3545f5c0dade869949e367
 workflow:
     workflowVersion: 1.0.0
     speakeasyVersion: latest
@@ -39,7 +39,7 @@ workflow:
                 - location: ./.speakeasy/overlays/fix-remove-unwanted-headers.yaml
                 - location: ./.speakeasy/overlays/fix-add-x-forwarded-for-header.yaml
             registry:
-                location: registry.speakeasyapi.dev/gr4vy/gr4vy/openapi
+                location: registry.speakeasyapi.dev/speakeasy-self/speakeasy-self/openapi
     targets:
         typescript:
             target: typescript
@@ -49,7 +49,7 @@ workflow:
                     token: $npm_token
             codeSamples:
                 registry:
-                    location: registry.speakeasyapi.dev/gr4vy/gr4vy/openapi-typescript-code-samples
+                    location: registry.speakeasyapi.dev/speakeasy-self/speakeasy-self/openapi-typescript-code-samples
                 labelOverride:
                     fixedValue: TypeScript
                 blocking: false

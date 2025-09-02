@@ -3,18 +3,18 @@ id: 51cb4b7f-adbc-475c-a495-d8672b13ce8e
 management:
   docChecksum: 7f11ffafce6c05af8aafdda0064129e0
   docVersion: 1.0.0
-  speakeasyVersion: 1.606.8
-  generationVersion: 2.687.13
-  releaseVersion: 1.1.39
-  configChecksum: c1f6c9a833b0859891bbd17c91a9093f
-  repoURL: https://github.com/gr4vy/gr4vy-typescript.git
-  installationURL: https://github.com/gr4vy/gr4vy-typescript
+  speakeasyVersion: 1.607.0
+  generationVersion: 2.690.1
+  releaseVersion: 1.1.40
+  configChecksum: 440b89057b9525ae4441c9482b78918f
+  repoURL: https://github.com/speakeasy-sdks/gr4vy-typescript.git
+  installationURL: https://github.com/speakeasy-sdks/gr4vy-typescript
   published: true
 features:
   typescript:
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.12
-    core: 3.21.20
+    core: 3.21.21
     defaultEnabledRetries: 0.1.0
     enumUnions: 0.1.0
     envVarSecurityUsage: 0.1.2
@@ -4454,6 +4454,3 @@ examples:
           application/json: {"type": "error", "code": "gateway_timeout", "status": 504, "message": "Request could not be processed"}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: |
-  ## SDK Changes Detected:
-  * `gr4vy.transactions.cancel()`: **Added**

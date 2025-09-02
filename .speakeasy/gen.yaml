@@ -21,18 +21,18 @@ generation:
     generateNewTests: false
     skipResponseBodyAssertions: false
 typescript:
-  version: 1.1.39
+  version: 1.1.40
   additionalDependencies:
     dependencies:
-      "@trust/keyto": ^1.0.1
+      '@trust/keyto': ^1.0.1
       jsonwebtoken: ^9.0.2
       jwk-thumbprint: ^0.1.4
       snakecase-keys: ^6.0.0
       uuid: ^11.1.0
     devDependencies:
-      "@types/jsonwebtoken": ^9.0.10
-      "@types/trust__keyto": ^1.0.4
-      "@types/uuid": ^10.0.0
+      '@types/jsonwebtoken': ^9.0.10
+      '@types/trust__keyto': ^1.0.4
+      '@types/uuid': ^10.0.0
       timekeeper: ^2.3.1
       vitest: ^3.2.4
     peerDependencies: {}
@@ -64,10 +64,9 @@ typescript:
   methodArguments: infer-optional-args
   moduleFormat: commonjs
   outputModelSuffix: output
+  packageName: '@gr4vy/sdk'
   responseFormat: flat
   templateVersion: v2
-  useIndexModules: true
-  packageName: "@gr4vy/sdk"
   usageSDKInit: |-
     new Gr4vy({
         id: "example",
@@ -79,8 +78,9 @@ typescript:
     })
   usageSDKInitImports:
     - import: withToken
-      package: "@gr4vy/sdk"
+      package: '@gr4vy/sdk'
       type: typeImport
     - import: fs
       package: fs
       type: packageImport
+  useIndexModules: true
